@@ -1,0 +1,250 @@
+
+/* =========== Google Fonts =========== */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* ========== Variables CSS ========== */
+:root {
+  
+  /* Colors */
+  --color-primary: rgb(47, 129, 247);
+  --color-secondary: rgb(230, 237, 243) ;
+  --color-third: rgb(35, 134, 54) ;
+  --color-default: rgb(3, 0, 46);
+  --color-shadow-1: rgba(44, 40, 102, 0.59);
+  --color-shadow-2: rgba(230, 237, 243, 0.749) ;
+
+  /* Fonts Size */
+  --font-default: 'Rubik', sans-serif;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-default: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-xsmall: 0.813rem;
+
+  /* Font Weight */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Box Shadow */
+  --shadow-1: 0px 5px 20 0px var(--color-shadow-1);
+
+  /* Border radius */
+  --border-radius-all: 20px;
+  --border-radius-bl: 0 0 20px 0;
+  --border-radius-br: 0 20px 0 0;
+  --border-radius-tl: 0 0 0 20px;
+  --border-radius-tr: 20px 0 0 0;
+
+  /* Animation */
+  --animation-letter-animation: letter-animation 5s linear forwards;
+  --animation-btn-1: button-push 0.3s linear 1;
+  
+
+  /* Position */
+  --position-relative: relative;
+  --position-absolute: absolute;
+
+}
+
+/* ======================================================== */
+/* =============== RESPONSIVE -> TYPOGRAPHY =============== */
+/* ======================================================== */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --font-size-h1: 1.75rem;
+    --font-size-h2: 1.25rem;
+    --font-size-h3: 1rem;
+    --font-size-default: 0.930rem;
+    --font-size-small: 0.810rem;
+    --font-size-xsmall: 0.75rem;
+  }
+}
+
+
+/* ========== MAIN ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+}
+
+body {
+  background-color: var(--color-default);
+  line-height: 1.7;
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* ======================================================== */
+/* ======================= CLASSESS ======================= */
+/* ======================================================== */
+
+.btn-primary {
+  cursor: pointer;
+  border: 1px solid var(--color-third);
+  outline: none;
+  border-radius: var(--border-radius-all);
+  font-size: var(--font-size-xsmall);
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  box-shadow: 0 0 1px var(--color-shadow-1);
+  color: var(--color-third);
+  font-weight: var(--font-weight-bold);
+}
+
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-primary:hover {
+  animation: var(--animation-btn-1);
+  /* color: var(--color-default); */
+}
+
+.btn-secondary {
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: var(--border-radius-all) solid var(--color-secondary);
+  font-size: var(--font-size-xsmall);
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  box-shadow: 0 0 1px var(--color-shadow-1);
+  color: var(--color-third);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn-tertiary {
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: var(--border-radius-all) solid var(--color-third);
+  font-size: var(--font-size-xsmall);
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  box-shadow: 0 0 1px var(--color-shadow-1);
+  color: var(--color-third);
+  font-weight: var(--font-weight-bold);
+}
+
+.container{
+  /* --mdb-gutter-x: 1.5rem;
+  --mdb-gutter-y: 0; */
+  max-width: 1080px;
+  /* width: 100%; */
+  /* padding-right: calc(var(--mdb-gutter-x) * 0.5);
+  padding-left: calc(var(--mdb-gutter-x) * 0.5); */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+@media (min-width: 576px) {
+  .container{
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container{
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1320px;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.section {
+  padding: 0 7rem  0 2rem ;
+}
+
+.section-title {
+  font-size: var(--font-size-h1);
+  margin: 0 0 3.75rem 0.875rem;
+  font-weight: var(--font-weight-bold);
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  left: -0.875rem;
+  top: -0.875rem
+}
+
+/* FADE transition */
+.fade-in-top {
+  -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
