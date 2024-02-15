@@ -6,6 +6,7 @@ const Scrollbtn = () => {
         <a className="home-scroll-wrap" href='#projects'>
             <span className="home-scroll-mouse">
                 <span className="home-scroll-wheel">
+                  Click to Scroll
                   <i className='fi fi-sr-mouse'></i>
                 </span>
             </span>

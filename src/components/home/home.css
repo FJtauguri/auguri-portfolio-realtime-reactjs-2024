@@ -3,6 +3,7 @@
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    /* background-color: #171212; */
 }
 
 .introduction {
@@ -42,6 +43,10 @@
     /* margin: 0.5rem 0 0.5rem 0;  */
 }
 
+.home-scroll-wheel {
+    color: var(--color-shadow-2);
+}
+
 .home-education {
     position: absolute;
     right: 300px;
@@ -54,12 +59,43 @@
     justify-content: center;
     border-radius: 50px 50px 50px 0;
 }
-@media screen and (max-width: 1440px) and (min-width: 1024px) {
+
+/* LAPTOP LRGE */
+@media screen and (min-width: 1440px){
     .home-education {
-        right: 100px;
-        top: 70px;
-        height: 23vh;
-        width: 35vh;
+        right: 350px;
+        top: 200px;
+        height: 18vh;
+        width: 25vh;
+        min-width: 25vh;
+        min-height: 18vh;
         border-radius: 50px 50px 50px 0;
+    }
+}
+
+/* LAPTIOP */
+@media screen and (min-width: 1024px) and (max-width: 1025px){
+    .home-education {
+        right: 180px;
+        top: 150px;
+        height: 22vh;
+        width: 27vh;
+        min-width: 25vh;
+        min-height: 18vh;
+        border-radius: 50px 50px 50px 0;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 769px){
+    .home-education {
+        right: 130px;
+        top: 50px;
+        height: 22vh;
+        width: 27vh;
+        min-width: 25vh;
+        min-height: 18vh;
+        border-radius: 20px 20px 20px 0;
+        font-size: var(--font-size-xsmall);
     }
 }

@@ -1,17 +1,25 @@
 .sidebar {
-    position: fixed;
+    position: fixed ;
     /* right: 0; */
     left: 0;
     top: 0;
     background: var(--color-shadow-1);
     border: 0 1px 0 0 solid var(--color-shadow-2);
-    padding: 2.5rem;
+    /* padding: 2.5rem; */
     width: 110px;
     min-height: 100vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    z-index: 10;
+}
+
+.aside-sidebar {
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 10;
+    min-height: 100vh;
 }
 
 .navbar-list {
