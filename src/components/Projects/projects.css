@@ -17,6 +17,36 @@
     border-radius: 3%;
 }
 
+.pagination-button {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    width: 20px;
+    height: 25px;
+    align-items: center;
+    color: var(--color-secondary);
+}
+
+.pagination-buttons:hover {
+    background: var(--color-shadow-1);
+}
+
+
+
+.pagination {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* background-color: #000; */
+}
+
 .projects-section-title {
     position: relative;
 }
@@ -41,6 +71,12 @@
 .projects-card-id {
     width: 200px;
 }
+.projects-card-id:hover {
+    background-color: var(--color-default);
+    padding: 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
 
 .projects-description {
     font-size: var(--font-size-xsmall);
@@ -48,23 +84,73 @@
 }
 
 .modal {
+    transition: .5s;
     position: absolute;
-    width: 600px;
-    height: 400px;
-    top: 0;
-    right: 300px;
-    background-color: #041460;
+    /* width: 800px;
+    height: 400px; */
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* top: 0;
+    right: 205px; */
+    padding: 25px;
+    /* right: 0; */
+    /* background-color: #041360ee; */
+    /* overflow: hidden; */
+    /* filter: blur(10px); */
+
+    width: 148vh;
+    height: 60vh;
+    top: 44px;
+    right: 110px;
+    border-radius: 10px;
+    background-color: var(--color-shadow-1);
+
 
     /* overflow: hidden;
     filter: blur(10px); */
 }
 
-.modal-image {
-    max-width: 100px;
+.modal-content {
+    display: flex;
+    flex-direction: column;
 }
 
-.main-blurred {
-    overflow: hidden;
-    filter: blur(10px);
-    /* background: #000; */
+.modal-content-main {
+    background-color: var(--color-default);
+    margin: 0;
+    height: 48vh;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    position: relative;
+}
+
+.close {
+    background: var(--color-default);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-shadow-1);
+}
+
+.close:hover {
+    background-color: var(--color-shadow-1);
+    color: var(--color-default);
+    transition: all .5s;
+    border: 1px solid var(--color-default);
+}
+
+.modal-image {
+    max-width: auto;
+    height: 100%;
+}
+
+.modal-content-text {
+    margin: 0 0 0 20px;
+}
+
+.modal-description {
+    font-size: var(--font-size-xsmall);
+    color: var(--color-shadow-2);
 }
